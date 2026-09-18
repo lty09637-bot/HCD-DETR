@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 from hcd import RTDETR
 
 ROOT = Path(__file__).resolve().parent
-MODEL_CONFIG = ROOT / 'hcd/config/models/rt-detr/hcd-detr-paper.yaml'
+MODEL_CONFIG = ROOT / 'hcd/config/models/rt-detr/hcd-detr.yaml'
 
 
 if __name__ == '__main__':
