@@ -19,7 +19,13 @@ hcd/       HCD-DETR runtime, model definitions, and custom modules
 train.py   Minimal training entry point
 ```
 
-The paper model configuration is:
+The main model configuration used by `train.py` is:
+
+```text
+hcd/config/models/rt-detr/hcd-detr.yaml
+```
+
+The paper-oriented configuration is also included:
 
 ```text
 hcd/config/models/rt-detr/hcd-detr-paper.yaml
@@ -37,7 +43,7 @@ cd HCD-DETR
 python train.py
 ```
 
-`train.py` reads the dataset and run settings from environment variables. At minimum, set the path to a detection dataset YAML file:
+`train.py` reads the dataset and run settings from environment variables. By default it looks for `data.yaml` in the repository root. To use another dataset, set `HCD_DATA`:
 
 ```bash
 export HCD_DATA=/path/to/data.yaml
@@ -67,4 +73,3 @@ The dataset YAML should follow the standard object-detection format expected by 
 If you use this implementation, please cite:
 
 > Junsan Zhang, Tianyi Liu, Xiuxuan Shen, Ming Cheng, Zehan Jin, Zongquan Yao, and Yao Zhang. *HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery*.
-
