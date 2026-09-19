@@ -29,13 +29,4 @@ Install PyTorch for your CUDA environment first. Some commonly used dependencies
 
 ## Citation
 
-If you use this implementation, please cite:
-
-```bibtex
-@misc{zhang2026hcddetr,
-  title  = {HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery},
-  author = {Junsan Zhang and Tianyi Liu and Xiuxuan Shen and Ming Cheng and Zehan Jin and Zongquan Yao and Yao Zhang},
-  year   = {2026},
-  note   = {Manuscript}
-}
-```
+Citation information will be provided upon publication.
