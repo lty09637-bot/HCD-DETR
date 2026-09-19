@@ -1,6 +1,6 @@
 # HCD-DETR
 
-Official implementation of **HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery**.
+Implementation of **HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery**.
 
 ## Paper Overview
 
