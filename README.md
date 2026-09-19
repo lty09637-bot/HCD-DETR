@@ -14,14 +14,28 @@ The paper evaluates HCD-DETR on VisDrone2019, UAVDT, RSOD, and NWPU VHR-10. Resu
 
 ## Requirements
 
-Install PyTorch for your CUDA environment first. Some commonly used dependencies are shown below; this is not a complete dependency list.
+Install PyTorch for your CUDA environment first. Some commonly used dependencies are listed below; this is not a complete dependency list.
 
-```bash
-pip install torch torchvision opencv-python PyYAML numpy
-```
+- `torch>=1.8.2`
+- `torchvision>=0.9.2`
+- `opencv-python>=4.6.0`
+- `numpy>=1.18.5`
+- `PyYAML>=5.3.1`
+- `requests>=2.23.0`
+- `scipy>=1.4.1`
+- `psutil>=5.8.0` - system utilization
+- `py-cpuinfo>=8.0.0` - CPU information
+- `thop>=0.1.1` - FLOPs computation
 
 ## Citation
 
 If you use this implementation, please cite:
 
-> Junsan Zhang, Tianyi Liu, Xiuxuan Shen, Ming Cheng, Zehan Jin, Zongquan Yao, and Yao Zhang. *HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery*.
+```bibtex
+@misc{zhang2026hcddetr,
+  title  = {HCD-DETR: A Hierarchically Calibrated and Dual-Domain DETR for Enhanced Real-Time Object Detection in UAV Imagery},
+  author = {Junsan Zhang and Tianyi Liu and Xiuxuan Shen and Ming Cheng and Zehan Jin and Zongquan Yao and Yao Zhang},
+  year   = {2026},
+  note   = {Manuscript}
+}
+```
