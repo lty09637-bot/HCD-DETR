@@ -20,19 +20,6 @@ Install PyTorch for your CUDA environment first. Some commonly used dependencies
 pip install torch torchvision opencv-python PyYAML numpy
 ```
 
-## Python API
-
-The model can also be constructed directly:
-
-```python
-from hcd import RTDETR
-
-model = RTDETR("hcd/config/models/rt-detr/hcd-detr-2.yaml")
-model.train(data="/path/to/data.yaml", epochs=300, imgsz=640, batch=8)
-```
-
-The dataset YAML should follow the standard object-detection format expected by the RT-DETR/Ultralytics data loader, including `train`, `val`, and class-name definitions.
-
 ## Citation
 
 If you use this implementation, please cite:
