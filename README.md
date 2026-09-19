@@ -12,48 +12,13 @@ UAV images contain complex backgrounds, large scale variation, and many small an
 
 The paper evaluates HCD-DETR on VisDrone2019, UAVDT, RSOD, and NWPU VHR-10. Results reported in the manuscript show improved detection performance and generalization with a compact real-time detector.
 
-## Repository Contents
+## Requirements
 
-```text
-hcd/       HCD-DETR runtime, model definitions, and custom modules
-train.py   Minimal training entry point
-```
-
-The main model configuration used by `train.py` is:
-
-```text
-hcd/config/models/rt-detr/hcd-detr.yaml
-```
-
-The paper-oriented configuration is also included:
-
-```text
-hcd/config/models/rt-detr/hcd-detr-paper.yaml
-```
-
-## Quick Start
-
-Prepare a Python environment with a PyTorch installation suitable for your hardware and the usual runtime packages required by the included Ultralytics-style codebase. This repository intentionally does not pin every dependency; use versions compatible with your CUDA/PyTorch setup.
-
-Clone the repository and run the training entry point from its root:
+Install PyTorch for your CUDA environment first. Some commonly used dependencies are shown below; this is not a complete dependency list.
 
 ```bash
-git clone https://github.com/lty09637-bot/HCD-DETR.git
-cd HCD-DETR
-python train.py
+pip install torch torchvision opencv-python PyYAML numpy
 ```
-
-`train.py` reads the dataset and run settings from environment variables. By default it looks for `data.yaml` in the repository root. To use another dataset, set `HCD_DATA`:
-
-```bash
-export HCD_DATA=/path/to/data.yaml
-export HCD_DEVICE=0          # use cpu for CPU training
-export HCD_EPOCHS=300
-export HCD_BATCH=8
-python train.py
-```
-
-Optional variables include `HCD_IMGSZ`, `HCD_WORKERS`, `HCD_PROJECT`, and `HCD_NAME`. Training outputs are written below the selected project directory.
 
 ## Python API
 
@@ -62,7 +27,7 @@ The model can also be constructed directly:
 ```python
 from hcd import RTDETR
 
-model = RTDETR("hcd/config/models/rt-detr/hcd-detr-paper.yaml")
+model = RTDETR("hcd/config/models/rt-detr/hcd-detr-2.yaml")
 model.train(data="/path/to/data.yaml", epochs=300, imgsz=640, batch=8)
 ```
 
